@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.2/js/dataTables.select.js">
+  <link rel="stylesheet" href="{{ url_for('static', filename='app-home/app-home.css') }}">
+  <title>Video Quality Assessment Dashboard</title>
+</head>
+
+<body onload="onLoad()">
+  <div class="container">
+    <div class="row" id="section-row-1">
+      <p class="uuid">
+        <span id="uuidText"></span>
+      </p>
+      <div class="col-sm-8" id="upload-section">
+        <div class="form" id="upload-area">
+          <div class="upload-ui" id="upload-rect">
+            <span style="font-size: 24px;">Drag & Drop Files to Upload</span>
+            <input id="input-swipe-upload" type="file" style="display: none;" name="files[]" multiple>
+            <input id="input-click-upload" type="file" style="display: none;" name="files[]" multiple>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4" id="algo-section">
+        <div class="row" id="section-row-2">
+          <div class="col-6 align-self-end">
+            <div class="row" id="action-button-1">
+              <div class="col no-padding">
+                <div class="action-button slide-left-blue" onclick="evalUploads()">EVALUATE</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 align-self-end">
+            <div class="row" id="action-button-2">
+              <div class="col no-padding">
+                <div class="action-button slide-left-green" onclick="exportReportToExcel(this)">DOWNLOAD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="upload-table-display">
+        <table id="upload-table" class="display" width="100%"></table>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.2.2/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@linways/table-to-excel@1.0.4/dist/tableToExcel.min.js"></script>
+  <script src="{{url_for('static', filename='app-home/app-home.js')}}"></script>
+</body>

@@ -1,0 +1,116 @@
+.no-padding {
+	padding: 0px;
+}
+
+.container {
+	margin-top: 50px;
+}
+
+#section-row-1 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.uuid {
+	text-align: start;
+	padding: 0px;
+	margin-bottom: 15px;
+}
+
+#upload-section {
+	padding: 0px;
+}
+
+.upload-ui {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	border: 2px dashed;
+}
+
+.dragover {
+	background-color: rgb(135, 206, 250);
+}
+
+#algo-section {
+	height: 200px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+}
+
+.action-button {
+	color: black;
+	border-radius: 0px;
+	padding: 9px 18px;
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid;
+	-webkit-transition: ease-out 0.4s;
+	-moz-transition: ease-out 0.4s;
+	transition: ease-out 0.4s;
+	width: 100%;
+	text-align: center;
+}
+
+.action-button:hover {
+	color: white;
+	border: 2px solid black;
+}
+
+.slide-left-blue:hover {
+	box-shadow: inset 0 0 0 50px darkviolet;
+}
+
+.slide-left-green:hover {
+	box-shadow: inset 0 0 0 50px green;
+}
+
+#section-row-2 {
+	height: 100%;
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#action-button-1 {
+	margin-right: -6px;
+}
+
+#action-button-2 {
+	margin-left: -6px;
+}
+
+#upload-table {
+	margin-top: 12px;
+}
+
+#upload-table-display {
+	padding: 10px 0px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+#upload-table_info {
+	display: contents;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+input:focus {
+	outline: 0px;
+}
+
+.select-info {
+	padding-left: 10px;
+}
+
+#upload-table_paginate {
+	margin-top: 2px;
+}
+
+#upload-table_paginate>span>a {
+	padding: 4px 12px;
+}

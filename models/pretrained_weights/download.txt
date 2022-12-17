@@ -1,0 +1,1 @@
+wget https://github.com/QualityAssessment/DOVER/releases/download/v0.1.0/DOVER.pth
